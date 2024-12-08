@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feriepenger Kalkulator</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Feriepenger Kalkulator</h1> 
+    </header>
+    <div class="container">
+        <main>
+            <form id="calculator-form">
+                <div class="form-group">
+                    <label for="income-2023">Lønn før skatt i 2023 (NOK):</label>
+                    <input type="number" id="income-2023" placeholder="F.eks. 500 000" required>
+                </div>
+                <div class="form-group">
+                    <label for="income-2024">Lønn før skatt i 2024 (NOK):</label>
+                    <input type="number" id="income-2024" placeholder="F.eks. 500 000" required>
+                </div>
+                <div class="form-group">
+                    <label for="percentage">Velg feriepenger prosent:</label>
+                    <select id="percentage" required>
+                        <option value="10.2">Under 60 år: 10,2%</option>
+                        <option value="12">Under 60 år: 12%</option>
+                        <option value="12.5">Over 60 år: 12,5%</option>
+                        <option value="14.3">Over 60 år: 14,3%</option>
+                    </select>
+                </div>
+                <button type="button" id="calculate-btn">Regn Ut</button>
+            </form>
+            <div id="result" class="result"></div>
+        </main>
+    </div>
+    <footer>
+        <p>© 2024 Feriepenger Kalkulator</p>
+    </footer>
+    <script src="/index.js"></script>
+</body>
+</html>
+
+

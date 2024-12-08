@@ -1,3 +1,4 @@
+Simple Calculator that helps you calculte 'Feriepenger' (Holdiay salary)
 Technologies Used
 
 - **HTML**: Structure of the page

@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #121212; /* Dark mode pozadina */
-    background-image: url('money.jpg'); /* Putanja do slike */
+    background-image: url('vacation.jpg'); /* Putanja do slike */
     background-size: cover; /* Slika će popuniti celu pozadinu */
     background-position: center; /* Slika će biti centrirana */
     margin: 0;
@@ -20,19 +20,21 @@ header h1 {
     text-transform: uppercase;
     width: 100%;
     text-align: center;
-    color: #ffffff;
+    color: #4CAF50;
     font-size: 4rem;
     font-weight: bold;
     margin-bottom: 30px;
-    text-shadow: 4px 4px 6px rgba(5, 5, 5, 3);
+    text-shadow: 4px 4px 6px rgba(1, 1, 1, 1);
 }
 
 .container {
     max-width: 400px;
+    width: 100%; /* Dodajemo širinu 100% da se prilagodi na manjim ekranima */
     background: #1e1e1e;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin: 0 auto; /* Centriranje na stranici */
 }
 
 form {
@@ -50,8 +52,8 @@ label {
 }
 
 input, select {
-    width: 95%;
-    padding: 10px;
+    width: 90%; /* Širina inputa i selecta na 100% */
+    padding: 12px;
     font-size: 16px;
     margin-top: 10px;
     border: 1px solid #555;
@@ -63,11 +65,12 @@ input, select {
 button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 15px;
 }
 
 button:hover {
@@ -85,7 +88,7 @@ footer {
     position: absolute;
     bottom: 2px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.3); 
     color: white; 
     text-align: center;
     padding: 10px;
@@ -94,6 +97,24 @@ footer {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+/* Animacija emojija */
+@keyframes emoji-fall {
+    0% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+}
+
+.emoji {
+    position: absolute;
+    font-size: 2rem;
+    animation: emoji-fall 2s linear;
+    pointer-events: none;
+}
 
 .emoji-container {
     position: fixed;
@@ -116,5 +137,54 @@ footer {
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+/* Responsive Design za Mobilne uređaje */
+@media (max-width: 768px) {
+    /* Glavni stilovi za mobilne uređaje */
+    body {
+        font-size: 14px; /* Manji font za mobilne uređaje */
+        padding: 0 10px; /* Dodajemo razmak sa strane */
+    }
+
+    header h1 {
+        font-size: 3rem; /* Manji font za naslov */
+        margin-bottom: 15px;
+    }
+
+    .container {
+        max-width: 80%; /* Smanjujemo maksimalnu širinu na mobilnim uređajima */
+        padding: 15px; /* Manja unutrašnja margina */
+    }
+
+    .form-group {
+        margin-bottom: 10px; /* Manji razmak između form grupa */
+    }
+
+    input, select {
+        padding: 12px;
+        font-size: 14px; /* Manji font za inpute */
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px;
+        width: 100%; /* Dugme koristi celu širinu ekrana na mobilnim uređajima */
+    }
+
+    .result {
+        font-size: 16px; /* Manji font za rezultate */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Manji font u footeru na mobilnim uređajima */
+    }
+}
+
+/* Responsive Design za veće ekrane */
+@media (min-width: 769px) {
+    .container {
+        max-width: 500px; /* Veća širina kontejnera na desktopu */
     }
 }
